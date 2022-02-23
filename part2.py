@@ -34,3 +34,9 @@ print("There were " + str(dc) + " requests made on " + month + " " + day + ", " 
             comp = day 
             dc = 1
             wcomp += 1
+            if (wcomp == 7):
+                wcomp = 0
+                print("\nThere were " + str(wc) + " requests made over the span of a week.\n")
+                wc = 0
+
+                
