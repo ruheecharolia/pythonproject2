@@ -94,4 +94,19 @@ for i in array:
                 print("\nThere were " + str(wc) + " requests made over the span of a week.\n")
                 wc = 0
                 
-                
+  if i.find("0"") != -1:
+        scl = i.find("0"") + 3
+
+        sc = i[scl:scl+1]
+
+        if(sc == "3"):
+            rec += 1
+
+        if(sc == "4"):
+            ncc += 1
+
+    if i.find("GET ") != -1:
+        fl = i.find("GET ") + 4
+        fel = i.find(" HTTP")
+        file = i[fl:fel]
+        arr2.append(file)
