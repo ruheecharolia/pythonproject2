@@ -27,3 +27,10 @@ if comp == 0:
                 print("\nThere were " + str(mc) + " requests made over the span of " + mcomp + " " + year +".\n")
                 mcomp = month
                 mc = 0
+
+print("There were " + str(dc) + " requests made on " + month + " " + day + ", " + year + ".")
+            wc += dc
+            mc += dc
+            comp = day 
+            dc = 1
+            wcomp += 1
