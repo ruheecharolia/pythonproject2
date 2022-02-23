@@ -12,4 +12,18 @@ mc = 0
 for i in array:
     if i.find("[") != -1:
         dl = i.find("[")
-        
+        day = i[dl+1:dl+3]
+        month = i[dl+4:dl+7]
+
+if comp == 0:
+            comp = day
+            mcomp = month
+            dc += 1
+        elif comp == day:
+            dc += 1
+        else:
+            year = i[dl+8:dl+12]
+            if mcomp != month:
+                print("\nThere were " + str(mc) + " requests made over the span of " + mcomp + " " + year +".\n")
+                mcomp = month
+                mc = 0
