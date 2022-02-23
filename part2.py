@@ -40,3 +40,11 @@ print("There were " + str(dc) + " requests made on " + month + " " + day + ", " 
                 wc = 0
 
                 
+print("\nThere were " + str(mc) + " requests made over the span of " + mcomp + " " + year +".\n")
+
+from collections import Counter
+
+with open("http_access_log.txt") as file_in:
+    array = []
+    for line in file_in:
+        array.append(line)
