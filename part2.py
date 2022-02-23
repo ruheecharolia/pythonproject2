@@ -110,3 +110,16 @@ for i in array:
         fel = i.find(" HTTP")
         file = i[fl:fel]
         arr2.append(file)
+
+print("\nThere were " + str(mc) + " requests made over the span of " + mcomp + " " + year +".\n") 
+nccper = (ncc/tr) * 100.0
+recper = (rec/tr) * 100.0
+
+print(str(nccper) + "% of the requests were not successful.")
+print(str(recper) + "% of the requests were redirected elsewhere.\n")
+
+c = Counter(arr2)
+mc = c.most_common()[0]
+lc = c.most_common()[-1]
+print("The most-requested file was " + str(mc[0]) + ".")
+print("The least-requested file was " + str(lc[0]) + ".")
