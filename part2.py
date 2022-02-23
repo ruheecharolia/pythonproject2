@@ -48,3 +48,36 @@ with open("http_access_log.txt") as file_in:
     array = []
     for line in file_in:
         array.append(line)
+
+comp = 0
+dc = 0
+
+wcomp = 0
+wc = 0
+mcomp = ""
+mc = 0
+
+tr = 0
+ncc = 0
+rec = 0
+
+arr2 = []
+
+for i in array:
+    if i.find("[") != -1:
+        dl = i.find("[")
+        day = i[dl+1:dl+3]
+        month = i[dl+4:dl+7]
+
+        if comp == 0:
+            comp = day
+            mcomp = month
+            dc += 1
+        elif comp == day:
+            dc += 1
+        else:
+            year = i[dl+8:dl+12]
+            if mcomp != month:
+                print("\nThere were " + str(mc) + " requests made over the span of " + mcomp + " " + year +".\n")
+                mcomp = month
+                mc = 0
