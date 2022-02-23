@@ -9,3 +9,7 @@ wc = 0
 mcomp = ""
 mc = 0
 
+for i in array:
+    if i.find("[") != -1:
+        dl = i.find("[")
+        
